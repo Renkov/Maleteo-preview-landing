@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block head %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Maleteo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/styles.css">
+  <script src="assets/js/formulario.js" type="text/javascript"></script>
+  {% endblock %}
+</head>
+
+<body>
+{% block body %}
+{% block cabecera %}
+  <div class="wrapper">
+      <div class="container-fluid">
+        <header class="header">
+            {%block imgcabecera %} <img src="assets/img/logo.svg" alt="Maleteo"> {% endblock %}
+        </header>
+      </div>
+  </div>
+{% endblock %}
+  <main>
+  {%block main %}
+    <div class="jumboWhite">
+    {%block jumbo %}
+      <div class="jumbo-text">
+        <div class="jumbo-text__w">
+          <div class="row container-fluid">
+            <div class="app-form__w-app-img">
+                <img src="assets/img/iPhoneX.png"
+                     srcset="assets/img/iPhoneX@2x.png 2x, assets/img/iPhoneX.png 1x"
+                     alt="iPhoneX"
+                     class="app-form__app-img">
+            </div>
+            <div class="col-md-11 col-xs-10">
+                  <h1 class=" heading1 text-gradient">
+                    Gana dinero guardando equipaje a viajeros como tu
+                  </h1>
+                  <p class="heading4">Controla todo a través de una app de forma fácil y sencilla</p>
+                  <ul class="jumboWhite__app-btns">
+                    <li>
+                      <a href="#">
+                        <img src="assets/img/app-store.svg"
+                             alt=""
+                             class="jumboWhite__app-btn">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <img src="assets/img/google-play.svg"
+                             alt=""
+                             class="jumboWhite__app-btn">
+                      </a>
+                    </li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        <div class="jumbo-text__ww jumbo-text__ov">
+                <img src="assets/img/jumbo.jpg">
+        </div>
+      </div>
+    {% endblock %}
+    </div>
+    <div class="wrapper">
+      <div class="container-fluid">
+        {%block funcionamiento %}
+
+        <section class="app-form">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="howworks__title heading2">
+              ¿Cómo funciona?
+              </h2>
+            </div>
+            <section class="howworks col-md-6">
+          <ol class="howworks__steps row">
+      <!--Aquí ponemos el primer elemnto con bola -->
+            <li class="col-md-12"> 
+              <div class="howworks__step">
+                <div class="howworks__step-w-bola">
+                  
+                    <div class="howworks__step-bola">
+                      <span class="heading3">1</span>
+                    </div>
+                  
+                   <p class="howworks__step-title heading3">
+                    Date de alta
+                  </p>
+                </div>
+                <div class="howworks__step-w-txt">
+                 
+                  <p class="howworks__step-txt">
+                    Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados.
+                  </p>
+                </div>
+              </div>
+            </li>
+      <!--Aquí ponemos el segundo elemnto con bola -->
+            <li class="col-md-12"> 
+              <div class="howworks__step">
+                <div class="howworks__step-w-bola howworks__second-ball">
+                  <div class="howworks__ball">
+                      <div class="howworks__step-bola">
+                        <span class="heading3">2</span>
+                      </div>
+                  </div>
+                   <p class="howworks__step-title heading3">
+                    Date de alta
+                  </p>
+                </div>
+                <div class="howworks__step-w-txt">
+                 
+                  <p class="howworks__step-txt">
+                    Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados.
+                  </p>
+                </div>
+              </div>
+            </li>
+      <!--Aquí ponemos el tercer elemnto con bola -->
+             <li class="col-md-12"> 
+              <div class="howworks__step">
+                <div class="howworks__step-w-bola">
+                  <div class="howworks__step-bola">
+                    <span class="heading3">3</span>
+                  </div>
+                   <p class="howworks__step-title heading3">
+                    Date de alta
+                  </p>
+                </div>
+                <div class="howworks__step-w-txt">
+                 
+                  <p class="howworks__step-txt">
+                    Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
+<!--------------------------------------------FORMULARIO----------------------------------------------->
+            {%block formularioenviado %}
+            <div class="col-md-5 col-md-offset-1 sent-form" id="formulario-enviado">
+              <h2>¡Gracias!</h2>
+              <p>Tu formulario se ha enviado correctamente, pronto serás un guardián de Maleteo</p>
+            </div>
+            {% endblock %}
+            {%block formularionoenviado %}
+            <div class="col-md-5 col-md-offset-1" id="formulario">
+              <div class="the-form" >
+                <form action="https://httpbin.org/" method ="POST" id="json-formulario">
+                  <p class="the-form__title heading3">
+                    Solicita una demo
+                  </p>
+                  
+                  <div class="the-form__group">
+                    <label for="name">
+                      Nombre
+                    </label>
+                    <input type="text"
+                          id="name"
+                          class="the-form__input"
+                          placeholder="Mike Renkov">
+                  </div>
+
+                  <div class="the-form__group">
+                    <label for="name">
+                      Email
+                    </label>
+                    <input type="email"
+                          id="name"
+                          class="the-form__input"
+                          placeholder="mikhail@renkov.ru">
+                  </div>
+                  <div class="the-form__group">
+                    <label for="time">Horario preferido</label>
+                    <input class="the-form__input" id="time" type="time"></input>
+                  </div>
+                  <div class="the-form__group">
+                    <label for="city">
+                      Ciudad
+                    </label>
+                    <select name=""
+                            id="city"
+                            class="the-form__input the-form__select">
+                      <option value="">Madrid</option>
+                      <option value="">Barcelona</option>
+                      <option value="">Cartagena</option>
+                      <option value="">Las Bahamas</option>
+                    </select>
+                  </div>
+                  <div class="the-form__group input-range">
+                    <label for="range">Metros cuadrados disponibles</label>
+                    <input type="range" min="1" max="50"class="input-range__slider">
+                  </div>
+                  <div class="the-form__group the-form__group_checkbox">
+                    <input type="checkbox"
+                          id="privacity">
+                    <label for="privacity">
+                      Aceptas la <a href="#">política de privacidad</a>
+                    </label>
+                  </div>
+
+                  <input type="submit"
+                        class="btn btn-lg btn-primary"
+                        value="Enviar"
+                        >
+                </form>
+              </div>
+            </div>
+          </div>
+          {% endblock %}
+        {% endblock %}
+        </section>
+<!--------------------------------------------OPINIONES DE OTROS GUARDIANES----------------------------->
+        <section class="opinions">
+        {%block opiniones %}
+          <h2 class="opinions__title heading2">
+            Opiniones de otros guardianes
+          </h2>
+          <ul class="row">
+            <li class="col-md-4">
+              <div class="opinion">
+                <blockquote class="opinion__blq simple-bubble text-large speech-bubble speech-bubble2">
+                  Tras el enorme éxito internacional de su primera colaboración, “Bailar”, que ganó un galardón en los Premios
+                </blockquote>
+                <div class="avatar">
+                  <div class="avatar__img">
+                  </div>
+                    <div class="avatar__txt">
+                    <p class="opinion__author text-large">
+                      Sergio Garnacho
+                    </p>
+                    <p class="opinion__author-address">
+                      Tetuán, Madrid
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-4">
+              <div class="opinion">
+                <blockquote class="opinion__blq simple-bubble text-large speech-bubble speech-bubble2">
+                  Tras el enorme éxito internacional de su primera colaboración, “Bailar”, que ganó un galardón en los Premios
+                </blockquote>
+                <div class="avatar">
+                  <div class="avatar__img">
+                  </div>
+                  <div class="avatar__txt">
+                    <p class="opinion__author text-large">
+                      Sergio Garnacho
+                    </p>
+                    <p class="opinion__author-address">
+                      Tetuán, Madrid
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-4">
+              <div class="opinion">
+                <blockquote class="opinion__blq simple-bubble text-large speech-bubble speech-bubble2">
+                  Tras el enorme éxito internacional de su primera colaboración, “Bailar”, que ganó un galardón en los Premios
+                </blockquote>
+                <div class="avatar">
+                  <div class="avatar__img">
+                  </div>
+                    <div class="avatar__txt">
+                    <p class="opinion__author text-large">
+                      Sergio Garnacho
+                    </p>
+                    <p class="opinion__author-address">
+                      Tetuán, Madrid
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        {% endblock %}
+        </section>
+      </div>  
+    </div>
+    {%block googlemaps %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1517.8785896808452!2d-3.6943865489572323!3d40.45851103714373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4229036539b84b%3A0xe9147f67419c2744!2sCalle%20de%20Orense%2C%2069%2C%2028020%20Madrid!5e0!3m2!1ses!2ses!4v1570665950814!5m2!1ses!2ses" class="iframeMaps" frameborder="0"  allowfullscreen=""></iframe>
+    {% endblock %}
+  {% endblock %}
+  </main>
+  <footer class="footer">
+  {%block footer %}
+    <div class="wrapper">
+      <div class="container-fluid">
+        <img src="assets/img/logo1.svg"
+            alt="Maleteo"
+            class="footer__logo">
+        <p class="footer__claim">
+          Hecho con ❤️ en Madrid
+        </p>
+      </div>
+    </div>
+  {% endblock %}
+  </footer>
+</body>
+{% endblock %}
+</html>
+
+<!-----------------TWIIIG------------->
