@@ -1,0 +1,89 @@
+$jumbo-height: auto;
+$jumbo-height-md: 500px;
+
+.jumboWhite {
+  height: $jumbo-height;
+  background-color: transparent;
+  margin-bottom: 3em;
+  background-size: 50% 100%;
+  background-position-x: right;
+  background-repeat:no-repeat;
+
+  &__ww-title {
+    height: $jumbo-height;
+    color: $gray5;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media only screen and (min-width: $breakpoint-md) {
+      height: $jumbo-height-md;
+      
+    }
+  }
+
+  &__w-title {
+    padding: 1.2em;
+    @media only screen and (min-width: $breakpoint-md) {
+      padding: 2em 2em 2em 0em;
+      
+    }
+  }
+  
+  &__title {
+    color: $gray5;
+    margin-bottom: .7em;
+  }
+
+  &__app-btns {
+    list-style: none;
+    li {
+      display: inline-block;
+      &:first-child {
+        margin-right: 1em;
+      }
+    }
+  }
+
+  &__app-btn {
+    width: 150px;
+    @media only screen and (min-width: $breakpoint-md) {
+      width: auto;
+    }
+  }
+  &__p{
+    margin: 0 5em 1em 0;
+  }
+}
+
+.jumbo {
+  background-image: url(../img/jumbo.jpg);
+  background-size:cover;
+  background-position:bottom;
+  @media (-webkit-min-device-pixel-ratio: 2), 
+         (min-resolution: 192dpi) {
+    background-image: url(../img/jumbo@2x.jpg);
+                                  }
+
+}
+
+.jumbo-text {
+  display:flex;
+  &__w {
+    max-width: 50%;
+    @media only screen and (max-width: $breakpoint-md) {
+    min-width:90%
+    }
+  }
+  &__ww {
+   
+    z-index: -1;
+    @media only screen and (max-width: $breakpoint-md) {
+    margin-left: -30%;
+    }
+  }
+  &__ov{
+    overflow:hidden;
+  }
+}
+

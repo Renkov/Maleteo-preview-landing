@@ -1,0 +1,18 @@
+.avatar{
+	display:flex;
+
+	&__img {
+	width:50px;
+	height: 50px;
+	border-radius: 50%;
+	background-image: url(../img/deorro.jpg);
+	background-size: cover;
+		 @media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+		  background-image: url(../img/deorro@2x.jpg);
+		  																		}
+ 			}
+ 	&__txt {
+ 		display:block;
+ 		padding:1em;
+ 	}
+}

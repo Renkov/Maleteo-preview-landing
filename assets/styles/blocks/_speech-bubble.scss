@@ -1,0 +1,38 @@
+.speech-bubble {
+	position: relative;
+	border-radius: .4em;
+}
+
+.speech-bubble:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 5%;
+	width: 0;
+	height: 0;
+	border: 0.688em solid transparent;
+	border-top-color: $gray1;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -0.344em;
+	margin-bottom: -0.687em;
+}
+.speech-bubble2 {
+	position: relative;
+	border-radius: .4em;
+}
+
+.speech-bubble2:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 5%;
+	width: 0;
+	height: 0;
+	border: 0.388em solid transparent;
+	border-top-color: $white;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -0.244em;
+	margin-bottom: -0.387em;
+}

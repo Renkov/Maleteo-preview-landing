@@ -1,0 +1,9 @@
+.sent-form {
+	display:none;
+	border:1px solid $valid;
+	padding:1em;
+	&__checked{
+		display:block;
+		max-height: 100px;
+	}
+}
